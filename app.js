@@ -3,12 +3,15 @@ const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const cors = require("cors");
 const app = express();
+const indexRouter = require("./Routes/index");
 
 require("dotenv").config();
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); //req.body 객체로 인식
 app.use(cors());
+
+app.use("/api", indexRouter);
 
 const mongoURI = process.env.LOCAL_DB_ADDRESS;
 
