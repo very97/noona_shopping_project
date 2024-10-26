@@ -1,7 +1,7 @@
 // 사실 이게 어떻게 정의 되는지 잘 모르겠음. 검색 할 내용 2
 const UserController = {};
 const bcrpyt = require("bcryptjs");
-const User = require("../Model/User");
+const User = require("../Models/User");
 
 UserController.createUser = async (req, res) => {
   try {
