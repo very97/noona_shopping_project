@@ -1,5 +1,5 @@
 const express = require("express");
-const UserController = require("./controllers/user.Controller");
+const UserController = require("../Cotnroller/user.Controller");
 const router = express.Router();
 
 router.post("/", UserController.createUser);
